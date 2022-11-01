@@ -26,7 +26,8 @@ THEN the saved events persist
 
 ## Mock Up 
 
-https://shots.codepen.io/judebloom/pen/RwGbVWB-1280.jpg?version=1606316324
+![The Password Generator application displays a red button to "Generate Password".](./images/demo.jpg)
 
 ## Link to Uploaded Page
 
+https://devgomez1.github.io/daily-planner/
