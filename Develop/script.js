@@ -32,9 +32,8 @@ $(".saveBtn").on("click", function () {
 
     var savedText5 = $('#text5').val();
     localStorage.setItem('5text', savedText5)
-
-
 });
+
     var output9 = localStorage.getItem('9text');
     $('#text9').val(output9); 
 
@@ -62,7 +61,8 @@ $(".saveBtn").on("click", function () {
     var output5 = localStorage.getItem('5text');
     $('#text5').val(output5);
 
-$("row").each(function () {
+
+$(".row").each(function () {
     var timeStamp = $(this).attr("id");
     if (timeStamp < exactHour) {
         $(this).addClass("past");
