@@ -1,5 +1,5 @@
 
-var exactHour = moment().format('LT'); 
+var exactHour = moment().hours()
 var currentTime = moment().format('LLLL');
 var showDate = $("#currentDay");
 showDate.text(currentTime);
@@ -62,6 +62,23 @@ $(".saveBtn").on("click", function () {
     var output5 = localStorage.getItem('5text');
     $('#text5').val(output5);
 
-
+$("row").each(function () {
+    var timeStamp = $(this).attr("id");
+    if (timeStamp < exactHour) {
+        $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+    }
+    else if (timeStamp === exactHour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+        $(this).removeClass("future");
+    }
+    else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+    }
+})
 
 
